@@ -379,7 +379,47 @@ function removeFromCart(index) {
 
 function clearCart() {
     cart = [];
-    renderCart();
+    renderCart();  
+}
+      <br><br>
+
+<button onclick="orderOnWhatsApp()">
+    💬 Order on WhatsApp
+</button>
+    function orderOnWhatsApp() {
+    if (cart.length === 0) {
+        alert("Please add products to your cart first!");
+        return;
+    }
+
+    // Replace this example with your business number.
+    // Nigerian numbers use 234 followed by the number
+    // without the first zero.
+    const phoneNumber = "2348012345678";
+
+    let message = "Hello Tobby Cosmetic! 💄\n\n";
+    message += "I would like to order:\n\n";
+
+    let total = 0;
+
+    cart.forEach(item => {
+        const product = products[item.index];
+        const subtotal = product.price * item.quantity;
+
+        total += subtotal;
+
+        message += product.name + " x " + item.quantity;
+        message += " = ₦" + subtotal.toLocaleString("en-NG") + "\n";
+    });
+
+    message += "\nTotal: ₦" + total.toLocaleString("en-NG");
+    message += "\n\nPlease let me know how to complete my order.";
+
+    const whatsappURL =
+        "https://wa.me/" + phoneNumber +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
 }
 </script>
 
