@@ -36,14 +36,14 @@ header p {
 
 nav {
     background: #a61e63;
-    padding: 14px;
+    padding: 14px 5px;
     text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 0 8px;
     font-weight: bold;
 }
 
@@ -82,16 +82,16 @@ nav a {
 .product {
     background: white;
     border-radius: 12px;
-    padding: 15px 10px;
+    padding: 12px 10px;
     text-align: center;
     box-shadow: 0 3px 12px #00000012;
 }
 
 .product-image {
-    font-size: 55px;
+    font-size: 50px;
     background: #fff0f6;
     border-radius: 10px;
-    padding: 18px 5px;
+    padding: 20px 5px;
 }
 
 .product h3 {
@@ -106,21 +106,22 @@ nav a {
 }
 
 button {
-    background: #d63384;
     color: white;
     border: none;
-    padding: 11px 8px;
+    padding: 12px 10px;
     border-radius: 7px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 14px;
 }
 
-button:hover {
-    background: #a61e63;
-}
-
-.product button {
+.add-button {
+    background: #d63384;
     width: 100%;
+}
+
+.add-button:hover {
+    background: #a61e63;
 }
 
 .cart {
@@ -140,13 +141,18 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #eee;
 }
 
-.cart-item button {
-    padding: 7px;
-    background: #555;
+.cart-item span {
+    overflow-wrap: anywhere;
+}
+
+.remove-button {
+    background: #666;
+    padding: 8px;
+    flex-shrink: 0;
 }
 
 .cart-total {
@@ -158,6 +164,20 @@ button:hover {
 
 .clear-button {
     background: #555;
+}
+
+.whatsapp-button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    background: #25D366;
+    color: white;
+    font-size: 16px;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E;
 }
 
 footer {
@@ -192,9 +212,11 @@ footer {
 <section class="hero" id="home">
     <h2>Welcome to Tobby Cosmetic!</h2>
     <p>Discover beauty products to complement your style.</p>
-    <p>Find your favourites and add them to your shopping cart!</p>
+    <p>Find your favourites and order directly through WhatsApp!</p>
     <a href="#products">
-        <button>Shop Now 💕</button>
+        <button class="add-button" style="width:auto;">
+            Shop Now 💕
+        </button>
     </a>
 </section>
 
@@ -207,70 +229,90 @@ footer {
             <div class="product-image">💄</div>
             <h3>1. Lipstick</h3>
             <p class="price">₦3,500</p>
-            <button onclick="addToCart(0)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(0)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">💋</div>
             <h3>2. Lip Gloss</h3>
             <p class="price">₦2,500</p>
-            <button onclick="addToCart(1)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(1)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">🧴</div>
             <h3>3. Face Cream</h3>
             <p class="price">₦5,000</p>
-            <button onclick="addToCart(2)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(2)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">🫧</div>
             <h3>4. Facial Cleanser</h3>
             <p class="price">₦4,000</p>
-            <button onclick="addToCart(3)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(3)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">✨</div>
             <h3>5. Foundation</h3>
             <p class="price">₦6,000</p>
-            <button onclick="addToCart(4)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(4)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">🖌️</div>
             <h3>6. Makeup Brush Set</h3>
             <p class="price">₦7,500</p>
-            <button onclick="addToCart(5)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(5)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">👁️</div>
             <h3>7. Mascara</h3>
             <p class="price">₦3,000</p>
-            <button onclick="addToCart(6)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(6)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">🌸</div>
             <h3>8. Perfume</h3>
             <p class="price">₦8,000</p>
-            <button onclick="addToCart(7)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(7)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">🧴</div>
             <h3>9. Body Lotion</h3>
             <p class="price">₦5,500</p>
-            <button onclick="addToCart(8)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(8)">
+                Add to Cart 🛒
+            </button>
         </div>
 
         <div class="product">
             <div class="product-image">💅</div>
             <h3>10. Nail Polish</h3>
             <p class="price">₦1,500</p>
-            <button onclick="addToCart(9)">Add to Cart 🛒</button>
+            <button class="add-button" onclick="addToCart(9)">
+                Add to Cart 🛒
+            </button>
         </div>
 
     </div>
@@ -290,11 +332,16 @@ footer {
     <button class="clear-button" onclick="clearCart()">
         Clear Cart
     </button>
+
+    <button class="whatsapp-button" onclick="orderOnWhatsApp()">
+        💚 Order on WhatsApp
+    </button>
 </section>
 
 <footer>
     <h3>💗 TOBBY COSMETIC</h3>
-    <p>Thank you for visiting our beauty store!</p>
+    <p>Your Beauty, Our Passion!</p>
+    <p>Thank you for visiting our beauty store.</p>
     <p>&copy; 2026 Tobby Cosmetic</p>
 </footer>
 
@@ -327,6 +374,7 @@ function addToCart(index) {
     }
 
     renderCart();
+
     alert(products[index].name + " added to your cart!");
 }
 
@@ -337,11 +385,13 @@ function renderCart() {
     if (cart.length === 0) {
         container.textContent =
             "Your cart is empty. Add a product to get started!";
+
         totalDisplay.textContent = "₦0";
         return;
     }
 
     container.innerHTML = "";
+
     let total = 0;
 
     cart.forEach(item => {
@@ -354,18 +404,23 @@ function renderCart() {
         row.className = "cart-item";
 
         const description = document.createElement("span");
+
         description.textContent =
             product.name + " × " + item.quantity +
             " — ₦" + subtotal.toLocaleString("en-NG");
 
         const removeButton = document.createElement("button");
+
+        removeButton.className = "remove-button";
         removeButton.textContent = "Remove";
+
         removeButton.onclick = function() {
             removeFromCart(item.index);
         };
 
         row.appendChild(description);
         row.appendChild(removeButton);
+
         container.appendChild(row);
     });
 
@@ -379,26 +434,28 @@ function removeFromCart(index) {
 
 function clearCart() {
     cart = [];
-    renderCart();  
+    renderCart();
 }
-      <br><br>
 
-<button onclick="orderOnWhatsApp()">
-    💬 Order on WhatsApp
-</button>
-    function orderOnWhatsApp() {
+function orderOnWhatsApp() {
     if (cart.length === 0) {
         alert("Please add products to your cart first!");
         return;
     }
 
-    // Replace this example with your business number.
-    // Nigerian numbers use 234 followed by the number
-    // without the first zero.
+    /*
+      IMPORTANT:
+      Replace this example number with your own
+      business WhatsApp number before publishing.
+
+      Nigerian example:
+      08012345678 becomes 2348012345678.
+    */
+
     const phoneNumber = "2348012345678";
 
     let message = "Hello Tobby Cosmetic! 💄\n\n";
-    message += "I would like to order:\n\n";
+    message += "I would like to order these products:\n\n";
 
     let total = 0;
 
