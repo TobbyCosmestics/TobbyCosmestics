@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobby Cosmetic</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #d63384;
+            color: white;
+            padding: 25px 10px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        .welcome {
+            padding: 15px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            width: 220px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .product img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3,
+        .price {
+            color: #d63384;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .cart-section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            width: 92%;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .cart-item span {
+            overflow-wrap: anywhere;
+            text-align: left;
+        }
+
+        #total {
+            color: #d63384;
+            font-size: 23px;
+        }
+
+        .checkout-button {
+            background-color: #198754;
+        }
+
+        footer {
+            background-color: #d63384;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tobby Cosmetic 💄</h1>
+        <p>Your Beauty, Our Passion!</p>
+    </header>
+
+    <section class="welcome">
+        <h2>Welcome to Our Beauty Store!</h2>
+        <p>Discover cosmetics, hair products and beauty creams.</p>
+    </section>
+
+    <h2>Our Products 🛍️</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <img
+                src="https://images.unsplash.com/photo-1631214540242-9e3d8f9b7e2c?auto=format&fit=crop&w=500&q=80"
+                alt="Lip Gloss"
+            >
+            <h3>💄 Lip Gloss</h3>
+            <p>Beautiful lip gloss for your makeup collection.</p>
+            <p class="price">₦2,500</p>
+            <button onclick="addToCart('Lip Gloss', 2500)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+            <img
+                src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit
